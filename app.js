@@ -4,6 +4,7 @@ const galleryHeader = document.querySelector('.gallery-header');
 const searchBtn = document.getElementById('search-btn');
 const sliderBtn = document.getElementById('create-slider');
 const sliderContainer = document.getElementById('sliders');
+
 // selected image
 let sliders = [];
 
@@ -116,7 +117,7 @@ const changeSlide = (index) => {
     items[index].style.display = 'block';
 };
 
-const search = document.getElementById('search');
+let search = document.getElementById('search');
 
 const displayImg = () => {
     document.querySelector('.main').style.display = 'none';
@@ -143,6 +144,7 @@ sliderBtn.addEventListener('click', function () {
     } else {
         createSlider();
     }
+    document.getElementById("end-text").style.display = 'block';
 });
 
 const toggleSpinner = () => {
